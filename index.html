@@ -1,0 +1,395 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Mastering Monero - Chapter 1</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+		<link rel="stylesheet" href="css/theme/monero.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+
+					<h1>Mastering Monero</h1>
+
+					<h2>Chapter 1 - Introduction to cryptocurrencies & Monero</h2>
+
+				</section>
+				<section>
+					<h2>Introduction to cryptocurrencies & Monero</h2>
+					
+					<blockquote>
+						<p>
+							Maria is purchasing a car from George,
+							and in this chapter we'll consider three
+							different ways that she could pay him:
+							traditional banks,
+							transparent cryptocurrencies (e.g. Bitcoin),
+							and&nbsp;Monero.
+						</p>
+					</blockquote>
+				</section>
+				<section>
+					<h2>1.1 Payment through banks</h2>
+
+					<h3>Key Takeaways</h3>
+
+					<ul>
+						<li class="fragment fade-left">
+							This system is built entirely on trust.
+							<ul>
+								<li class="fragment fade-left">
+									Trust that transactions are legitimate.
+								</li>
+								<li class="fragment fade-left">
+									Trust that ledger is kept honestly.
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>1.1 Payment through banks</h2>
+
+					<h3>Key Takeaways</h3>
+
+					<ul>
+						<li class="fragment fade-left">
+							Maria and George's money are essentially IOUs.
+							<ul>
+								<li class="fragment fade-left">Maria and George have no way to audit the bank.</li>
+								<li class="fragment fade-left">Does the bank have their full amount on hand, or just a
+									<a href="https://en.wikipedia.org/wiki/Fractional-reserve_banking" target="_blank">
+										fractional&nbsp;reserve?</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+				</section>
+				<section>
+					<h2>1.1 Payment through banks</h2>
+
+					<h3>Key Takeaways</h3>
+
+					<ul>
+						<li class="fragment fade-left">
+							IOUs can be very bad during economic disruption.
+							<ul>
+								<li class="fragment fade-left">Negligence (the bank makes a mistake).</li>
+								<li class="fragment fade-left">Financial Issues (the bank overextends their assets or goes out
+									of&nbsp;business).
+								</li>
+								<li class="fragment fade-left">Malice and Corruption (the bank or a rogue employee steals
+									your&nbsp;money).
+								</li>
+								<li class="fragment fade-left">Hostile Third Parties (the bank is robbed or a hacker thieves
+									electronic&nbsp;funds).
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>1.1 Payment through banks</h2>
+
+					<h3>The Alternative: Blockchain</h3>
+
+					<img src="img/mm-0.0.1 terminology.png" alt="An analogy comparing blockchains to automobiles." style="width: 50%;" />
+
+					<p><em><strong>Note:</strong> This is probably one of the best ways I've seen of describing blockchains
+						to uninitiated users.</em></p>
+				</section>
+				<section>
+					<h2>1.2 Introduction to blockchains</h2>
+
+					<p>The term blockchain refers to a particular method for securing records in a database that all
+					network users share. It is groundbreaking for being a trustless system, where individuals retain
+					full autonomy over their funds, there is no central authority, and each participant can easily
+						verify and audit the system.</p>
+				</section>
+				<section>
+					<h2>1.2 Introduction to blockchains</h2>
+
+					<h3>1.2.1 What is a blockchain?</h3>
+					<ul>
+						<li class="fragment fade-left">
+							Blockchains are trustless systems
+							<ul>
+								<li class="fragment fade-left">Method for securing records in a database</li>
+								<li class="fragment fade-left">Anyone in the world can be a network maintainer <em>(Note: of a
+									public&nbsp;blockchain)</em>
+								</li>
+								<li class="fragment fade-left">Each participant keeps others honest by verifying the ledger</li>
+								<li class="fragment fade-left">Blockchains are immutable</li>
+							</ul>
+						</li>
+
+					</ul>
+
+				</section>
+				<section>
+					<h2>1.2 Introduction to blockchains</h2>
+
+					<h3>1.2.2 Blockchain benefits</h3>
+					<ul>
+						<li class="fragment fade-left">Simplicity and speed - Transactions verify in seconds or minutes as opposed
+							to days or weeks.
+						</li>
+						<li class="fragment fade-left">No-third party risk - Maria and George control their own money instead of
+							trusting a network of banks.
+						</li>
+						<li class="fragment fade-left">Pseudo-anonymity - Cryptocurrency ledgers do not record real names.</li>
+					</ul>
+
+				</section>
+				<section>
+					<h2>1.2 Introduction to blockchains</h2>
+
+					<h3>1.2.3 Blockchain drawbacks</h3>
+
+					<ul>
+						<li class="fragment fade-left">
+							Pseudo-anonymity is not anonymity
+							<ul>
+								<li class="fragment fade-left">
+									Governments, corporations, and nefarious actors can connect you to an address, e.g.:
+									<ul>
+										<li class="fragment fade-left">A person IRL that you transact with.</li>
+										<li class="fragment fade-left">A cryptocurrency exchange you purchase from (who follows
+											KYC&nbsp;laws).
+										</li>
+										<li class="fragment fade-left">A government who obtains info from above-mentioned
+											exchange.
+										</li>
+										<li class="fragment fade-left">If you post your address publicly on the internet so people
+											can send you money.
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+
+				</section>
+				<section>
+					<h2>1.2 Introduction to blockchains</h2>
+
+					<h3>1.2.3 Blockchain drawbacks</h3>
+
+					<ul>
+						<li>
+							Pseudo-anonymity is not anonymity
+							<ul>
+								<li class="fragment fade-left">
+									If your address is identified:
+									<ul>
+										<li class="fragment fade-left">You could become a target if people see how much money
+											you&nbsp;have.
+										</li>
+										<li class="fragment fade-left">Your money could lose it's value if people see what you
+											have been doing with it &mdash;
+										</li>
+										<li class="fragment fade-left">&mdash; or if people see what the
+											person before you did with the
+											money&nbsp;(<a href="https://en.wikipedia.org/wiki/Fungibility" target="_blank">
+												fungibility
+											</a>).
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>1.2 Introduction to blockchains</h2>
+
+					<h3>1.2.3 Blockchain drawbacks</h3>
+
+					<ul>
+						<li>
+							Pseudo-anonymity is not anonymity
+							<ul>
+								<li class="fragment fade-left">
+									Corporations can track your spending habits and
+									<ul>
+										<li class="fragment fade-left">offer you different prices</li>
+										<li class="fragment fade-left">try to sell you things and be generally creepy</li>
+										<li class="fragment fade-left">or get hacked like EquiFax, resulting in a lot of your
+											personal data being in the wrong hands.
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>1.3 Introducing Monero</h2>
+
+					<h3>Key Takeaways</h3>
+
+					<ul>
+						<li class="fragment fade-left">
+							Monero (Singular) / Moneroj (Plural)
+							<ul>
+								<li class="fragment fade-left">
+									<a href="https://en.wikipedia.org/wiki/Esperanto" target="_blank">Esperanto</a>
+									for "coin"
+								</li>
+								<li class="fragment fade-left">Plural pronounced "moh - neh - roy". It seems the `j` has a `y`
+									sound in Esperanto.
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+
+				</section>
+				<section>
+					<h2>1.3 Introducing Monero</h2>
+
+					<h3>Key Takeaways</h3>
+
+					<ul>
+						<li class="fragment fade-left">
+							Monero is focused on privacy and censorship resistance.
+							<ul>
+								<li class="fragment fade-left">Parties can interact without revealing sender, recipient, or
+									transaction&nbsp;amounts.</li>
+								<li class="fragment fade-left">Nobody can view anyone else's account balance.</li>
+								<li class="fragment fade-left">Privacy is enforced by default.</li>
+								<li class="fragment fade-left">Monero has a decentralized ledger that all participants can download and&nbsp;verify.</li>
+							</ul>
+						</li>
+					</ul>
+
+				</section>
+				<section>
+					<h2>1.3 Introducing Monero</h2>
+
+					<h3>1.3.1 Principles of Monero</h3>
+
+					<ul>
+						<li class="fragment fade-left">Network Decentralization</li>
+						<li class="fragment fade-left">Financial Security</li>
+						<li class="fragment fade-left">Financial Privacy</li>
+						<li class="fragment fade-left">Fungibility</li>
+					</ul>
+				</section>
+				<section>
+					<h2>1.3 Introducing Monero</h2>
+
+					<h3>1.3.2 Real-life “use cases” for Monero</h3>
+
+					<p>Monero helps to prevent:</p>
+
+					<ul>
+						<li class="fragment fade-left">Price Manipulation</li>
+						<li class="fragment fade-left">Financial Surveillance</li>
+						<li class="fragment fade-left">Supply Chain Privacy</li>
+						<li class="fragment fade-left">Discrimination</li>
+						<li class="fragment fade-left">Criminal Acts from Lack of Wallet Privacy</li>
+						<li class="fragment fade-left">Tainted Coins</li>
+					</ul>
+
+				</section>
+				<section>
+					<h2>1.3 Introducing Monero</h2>
+
+					<h3>1.3.3 Monero: open-source decentralized community and&nbsp;software</h3>
+
+					<ul>
+						<li class="fragment fade-left">Decentralized network</li>
+						<li class="fragment fade-left">Distributed development team</li>
+						<li class="fragment fade-left">Open-source</li>
+						<li class="fragment fade-left">
+							Transparency:
+							<ul>
+								<li class="fragment fade-left"><a href="https://github.com/monero-project" target="_blank">GitHub</a></li>
+								<li class="fragment fade-left">Open <a href="irc://chat.freenode.net/#monero" target="_blank">IRC chats</a></li>
+								<li class="fragment fade-left">Public archives of meeting logs</li>
+							</ul>
+						</li>
+
+					</ul>
+
+				</section>
+				<section>
+					<h2>1.3 Introducing Monero</h2>
+
+					<h3>1.3.4 History of Monero</h3>
+
+					<ul>
+						<li class="fragment fade-left">Nicolas van Saberhagen published the <a href="https://cryptonote.org/" target="_blank">CryptoNote</a> protocol</li>
+						<li class="fragment fade-left">Somebody else used CryptoNote to create <a href="https://bytecoin.org/" target="_blank">ByteCoin</a></li>
+						<li class="fragment fade-left">`thankful_for_today` felt that ByteCoin wasn't decentralized because of a premine</li>
+						<li class="fragment fade-left">`thankful_for_today` took the CryptoNote protocol and created the community project "BitMonero"</li>
+						<li class="fragment fade-left">The community shortened the name to "Monero"</li>
+					</ul>
+
+				</section>
+				<section>
+					<h2>1.3 Introducing Monero</h2>
+
+					<h3>1.3.5 Ethical discussion</h3>
+
+					<ul>
+						<li class="fragment fade-left">Monero can be appealing to criminals (the same way fiat cash&nbsp;is).</li>
+						<li class="fragment fade-left">
+							Monero mining is designed to be easier than BitCoin.
+							<ul>
+								<li class="fragment fade-left">Therefore, a hacker could exploit this by creating software or
+									websites that mine Monero on a person's computer without their consent.
+								</li>
+								<li class="fragment fade-left">
+									Monero has a
+									<a href="https://mrw.getmonero.org/" target="_blank">Malware Response Workgroup</a>
+									that provides education, tools, and live support to help combat&nbsp;this.
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
