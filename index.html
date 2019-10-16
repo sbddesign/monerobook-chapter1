@@ -24,6 +24,10 @@
 		</script>
 	</head>
 	<body>
+		<div class="video-bg" id="video-bg">
+			<iframe src="https://player.vimeo.com/video/366768824?background=1" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+		</div>
+
 		<div class="reveal">
 			<div class="slides">
 				<section>
@@ -390,6 +394,14 @@
 					{ src: 'plugin/highlight/highlight.js', async: true }
 				]
 			});
+
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				if(event.indexh > 0) {
+					document.getElementById('video-bg').classList.add('hidden');
+				} else {
+					document.getElementById('video-bg').classList.remove('hidden');
+				}
+			} );
 		</script>
 	</body>
 </html>
